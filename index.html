@@ -30,11 +30,14 @@
 </head>
 <body>
 
+  <!-- Barra de progreso de lectura -->
+  <div class="scrollprogress" id="scrollProgress" aria-hidden="true"></div>
+
   <!-- ===================== NAV ===================== -->
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a href="#inicio" class="nav__brand" aria-label="Avemaría - Inicio">
-        <img src="statics/avemarialogo.png" alt="Avemaría" class="nav__logo" />
+        <img src="statics/avemarialogo.png" alt="Avemaría" class="nav__logo" width="46" height="46" decoding="async" />
         <span class="nav__brand-text">AVEMARÍA</span>
       </a>
 
@@ -69,7 +72,7 @@
         <span><i class="fa-solid fa-star" aria-hidden="true"></i> #1 en Villavicencio</span>
       </div>
 
-      <img src="statics/avemarialogo.png" alt="Logo Avemaría" class="hero__logo" />
+      <img src="statics/avemarialogo.png" alt="Logo Avemaría" class="hero__logo" decoding="async" />
 
       <h1 class="hero__title">AVE<span>MARÍA</span></h1>
       <p class="hero__tagline">Asado <span>·</span> Parche <span>·</span> Picnic</p>
@@ -167,8 +170,8 @@
     <div class="showreel__inner">
       <div class="showreel__text reveal">
         <span class="kicker">El ambiente</span>
-        <h2 class="section__title">Vívelo en <em>video</em></h2>
-        <p class="section__lead">Un recorrido por Avemaría: la parrilla al fuego, el verde del bosque nativo y el mejor parche de Villavicencio. Dale play y siéntelo.</p>
+        <h2 class="section__title">Así es <em>Avemaría</em></h2>
+        <p class="section__lead">Escondido entre el bosque nativo sobre la vía antigua a Restrepo, Avemaría es asado al carbón con sabor llanero, naturaleza por todos lados y el mejor parche de Villavicencio. Un lugar para venir con los tuyos y quedarte todo el día.</p>
         <ul class="showreel__feats">
           <li><i class="fa-solid fa-fire" aria-hidden="true"></i> Asado al carbón, sabor llanero</li>
           <li><i class="fa-solid fa-tree" aria-hidden="true"></i> Rodeado de naturaleza</li>
@@ -179,15 +182,15 @@
 
       <div class="showreel__media reveal">
         <div class="showreel__player" id="reelPlayer">
-          <video id="reelVideo" class="showreel__video" playsinline preload="none"
-                 poster="statics/video-poster.jpg" aria-label="Video del ambiente de Avemaría">
+          <video id="reelVideo" class="showreel__video" playsinline muted loop autoplay preload="auto"
+                 poster="statics/video-poster.jpg" aria-label="Ambiente de Avemaría">
             <source src="statics/videoreferenciamapa.mp4" type="video/mp4" />
             Tu navegador no soporta video HTML5. <a href="statics/videoreferenciamapa.mp4">Descarga el video</a>.
           </video>
-          <button class="showreel__play" id="reelPlay" type="button" aria-label="Reproducir video">
-            <i class="fa-solid fa-play" aria-hidden="true"></i>
+          <button class="showreel__sound" id="reelSound" type="button" aria-label="Activar sonido" aria-pressed="false">
+            <i class="fa-solid fa-volume-xmark" aria-hidden="true"></i>
           </button>
-          <span class="showreel__badge"><i class="fa-solid fa-circle-play" aria-hidden="true"></i> Avemaría en vivo</span>
+          <span class="showreel__badge"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Vía antigua a Restrepo</span>
         </div>
       </div>
     </div>
@@ -703,7 +706,7 @@
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__brand">
-        <img src="statics/avemarialogo.png" alt="Avemaría" />
+        <img src="statics/avemarialogo.png" alt="Avemaría" width="64" height="64" loading="lazy" decoding="async" />
         <p>Asado · Parche · Picnic<br/>Villavicencio, Meta</p>
       </div>
       <nav class="footer__links" aria-label="Pie de página">
@@ -719,6 +722,12 @@
       <p>© <span id="year"></span> Avemaría Villavicencio · Hecho con <i class="fa-solid fa-fire" aria-hidden="true"></i> y buen parche.</p>
     </div>
   </footer>
+
+  <!-- Botón flotante: reservar por WhatsApp siempre a la mano -->
+  <a href="https://wa.me/573104964953?text=Hola%20Avemar%C3%ADa%2C%20quiero%20reservar%20mesa" class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Reservar por WhatsApp" title="Reservar por WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.516 5.26l-.999 3.648 3.972-1.207zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413z"/></svg>
+    <span class="wa-float__label">Reservar</span>
+  </a>
 
   <a href="#inicio" class="totop" id="toTop" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
 

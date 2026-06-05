@@ -8,15 +8,40 @@
   const navLinks = document.getElementById('navLinks');
   const navToggle= document.getElementById('navToggle');
   const toTop    = document.getElementById('toTop');
+  const progress = document.getElementById('scrollProgress');
 
-  /* ---------- Nav: sombra al hacer scroll ---------- */
+  /* ---------- Nav + progreso + back-to-top al hacer scroll ---------- */
   function onScroll() {
     const y = window.scrollY;
     nav.classList.toggle('scrolled', y > 40);
     toTop.classList.toggle('show', y > 600);
+    if (progress) {
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - doc.clientHeight;
+      progress.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
+    }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
   onScroll();
+
+  /* ---------- Scrollspy: resaltar la sección visible en el menú ---------- */
+  if ('IntersectionObserver' in window) {
+    const spyLinks = {};
+    navLinks.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      const sec = document.getElementById(a.getAttribute('href').slice(1));
+      if (sec) spyLinks[sec.id] = a;
+    });
+    const spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        Object.keys(spyLinks).forEach(function (id) {
+          spyLinks[id].classList.toggle('active', id === e.target.id);
+        });
+      });
+    }, { rootMargin: '-50% 0px -50% 0px', threshold: 0 });
+    Object.keys(spyLinks).forEach(function (id) { spy.observe(document.getElementById(id)); });
+  }
 
   /* ---------- Menú móvil ---------- */
   function toggleMenu() {
@@ -34,6 +59,18 @@
 
   /* ---------- Reveal al hacer scroll ---------- */
   const reveals = document.querySelectorAll('.reveal');
+  /* Escalonar la entrada de elementos hermanos (grids) para un efecto en cascada */
+  const revealGroups = new Map();
+  reveals.forEach(function (el) {
+    const p = el.parentElement;
+    if (!revealGroups.has(p)) revealGroups.set(p, []);
+    revealGroups.get(p).push(el);
+  });
+  revealGroups.forEach(function (items) {
+    if (items.length > 1) items.forEach(function (el, i) {
+      el.style.transitionDelay = Math.min(i * 70, 350) + 'ms';
+    });
+  });
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
@@ -73,6 +110,32 @@
     return new Date(utc - 5 * 3600000);
   }
 
+  const DAYNAMES = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+
+  function fmtTime(t) {
+    const h = Math.floor(t / 60), m = t % 60;
+    if (h === 12 && m === 0) return '12:00 m.';
+    const ap = h >= 12 ? 'p.m.' : 'a.m.';
+    let hh = h % 12; if (hh === 0) hh = 12;
+    return hh + ':' + String(m).padStart(2, '0') + ' ' + ap;
+  }
+
+  // Próxima apertura buscando hasta una semana hacia adelante.
+  function nextOpening(co) {
+    const day = co.getDay();
+    const mins = co.getHours() * 60 + co.getMinutes();
+    for (let d = 0; d < 8; d++) {
+      const dd = (day + d) % 7;
+      const ranges = HOURS[dd] || [];
+      for (let i = 0; i < ranges.length; i++) {
+        const start = ranges[i][0];
+        if (d === 0) { if (mins < start) return { d: d, dd: dd, start: start }; }
+        else { return { d: d, dd: dd, start: start }; }
+      }
+    }
+    return null;
+  }
+
   function updateStatus() {
     const dot  = document.getElementById('statusDot');
     const text = document.getElementById('statusText');
@@ -89,7 +152,13 @@
       text.textContent = 'Abierto ahora';
     } else {
       dot.classList.add('closed');
-      text.textContent = 'Cerrado ahora';
+      const nx = nextOpening(co);
+      if (nx) {
+        const when = nx.d === 0 ? 'hoy' : nx.d === 1 ? 'mañana' : 'el ' + DAYNAMES[nx.dd];
+        text.textContent = 'Cerrado · abre ' + when + ' ' + fmtTime(nx.start);
+      } else {
+        text.textContent = 'Cerrado ahora';
+      }
     }
   }
   updateStatus();
@@ -423,22 +492,40 @@
 })();
 
 /* =========================================================
-   VIDEO / SHOWREEL — play diferido (carga el video solo al pulsar)
+   VIDEO / SHOWREEL — autoplay silenciado + toggle de sonido
    ========================================================= */
 (function () {
   'use strict';
   var player = document.getElementById('reelPlayer');
   if (!player) return;
-  var video   = document.getElementById('reelVideo');
-  var playBtn = document.getElementById('reelPlay');
+  var video    = document.getElementById('reelVideo');
+  var soundBtn = document.getElementById('reelSound');
 
-  function start() {
-    video.setAttribute('controls', '');          // muestra controles nativos al iniciar
+  // Reproduce solo y en bucle, en silencio (requisito de autoplay del navegador).
+  function tryPlay() {
     var p = video.play();
-    if (p && p.catch) p.catch(function () {});    // ignora rechazo de autoplay
-    playBtn.classList.add('is-hidden');
+    if (p && p.catch) p.catch(function () {});   // ignora rechazo de autoplay
   }
-  playBtn.addEventListener('click', start);
-  video.addEventListener('play',  function () { playBtn.classList.add('is-hidden'); });
-  video.addEventListener('ended', function () { playBtn.classList.remove('is-hidden'); });
+  if (video.readyState >= 2) tryPlay();
+  video.addEventListener('canplay', tryPlay, { once: true });
+
+  // Solo reproduce cuando es visible, para no gastar datos fuera de pantalla.
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) tryPlay(); else video.pause();
+      });
+    }, { threshold: 0.25 }).observe(player);
+  }
+
+  // Botón para activar/silenciar el audio.
+  soundBtn.addEventListener('click', function () {
+    video.muted = !video.muted;
+    var on = !video.muted;
+    if (on) tryPlay();
+    soundBtn.setAttribute('aria-pressed', String(on));
+    soundBtn.setAttribute('aria-label', on ? 'Silenciar' : 'Activar sonido');
+    soundBtn.querySelector('i').className =
+      on ? 'fa-solid fa-volume-high' : 'fa-solid fa-volume-xmark';
+  });
 })();
