@@ -1,0 +1,19 @@
+# Dependencias
+node_modules/
+
+# Carpeta de trabajo / temporales (no se despliega)
+_work/
+
+# Logs y sistema
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Entorno
+.env
+.env.*

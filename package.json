@@ -1,0 +1,12 @@
+{
+  "name": "avemaria-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web de Avemaría · Asado · Parche · Picnic (Villavicencio)",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

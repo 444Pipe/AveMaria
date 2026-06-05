@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AVEMARÍA · Asado · Parche · Picnic | Villavicencio</title>
+  <meta name="description" content="El mejor asado de Villavicencio. Restaurante al aire libre a 5 minutos de la ciudad, rodeado de naturaleza. Asado · Parche · Picnic. #1 en Villavicencio." />
+  <meta name="theme-color" content="#FF158C" />
+  <meta name="author" content="Avemaría Villavicencio" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AVEMARÍA · Asado · Parche · Picnic" />
+  <meta property="og:description" content="El mejor asado de Villavicencio, rodeado de naturaleza. Ven a vivir el parche." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="statics/avemarialogo.png" />
+  <meta property="og:locale" content="es_CO" />
+
+  <link rel="icon" type="image/png" href="statics/avemarialogo.png" />
+  <link rel="apple-touch-icon" href="statics/avemarialogo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Rye&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#inicio" class="nav__brand" aria-label="Avemaría - Inicio">
+        <img src="statics/avemarialogo.png" alt="Avemaría" class="nav__logo" />
+        <span class="nav__brand-text">AVEMARÍA</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Navegación principal">
+        <a href="#concepto">El Parche</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#video">Video</a>
+        <a href="#mapa">Zonas</a>
+        <a href="#menu">Carta</a>
+        <a href="#galeria">Galería</a>
+        <a href="#resenas">Reseñas</a>
+        <a href="#visitanos">Visítanos</a>
+        <a href="https://wa.me/573104964953?text=Hola%20Avemar%C3%ADa%2C%20quiero%20reservar%20mesa" class="nav__cta" target="_blank" rel="noopener">Reservar</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__rainbow" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <div class="hero__badge">
+        <span class="dot" id="statusDot"></span>
+        <span id="statusText">Abierto ahora</span>
+        <span class="hero__badge-sep">·</span>
+        <span><i class="fa-solid fa-star" aria-hidden="true"></i> #1 en Villavicencio</span>
+      </div>
+
+      <img src="statics/avemarialogo.png" alt="Logo Avemaría" class="hero__logo" />
+
+      <h1 class="hero__title">AVE<span>MARÍA</span></h1>
+      <p class="hero__tagline">Asado <span>·</span> Parche <span>·</span> Picnic</p>
+      <p class="hero__sub">El mejor asado de Villavicencio. Un restaurante al aire libre a solo 5 minutos de la ciudad, rodeado de la naturaleza de un bosque nativo.</p>
+
+      <div class="hero__actions">
+        <a href="#menu" class="btn btn--primary">Ver la carta</a>
+        <a href="https://wa.me/573104964953?text=Hola%20Avemar%C3%ADa%2C%20quiero%20reservar%20mesa" class="btn btn--ghost" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.516 5.26l-.999 3.648 3.972-1.207zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413z"/></svg>
+          Reservar por WhatsApp
+        </a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="hero__stat"><strong>64K</strong><span>seguidores</span></div>
+        <div class="hero__stat"><strong>4.9</strong><span><i class="fa-solid fa-star" aria-hidden="true"></i> TripAdvisor</span></div>
+        <div class="hero__stat"><strong>+3.300</strong><span>reseñas</span></div>
+      </div>
+    </div>
+
+    <a href="#concepto" class="hero__scroll" aria-label="Desplázate hacia abajo">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ===================== TICKER ===================== -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>ASADO <i class="fa-solid fa-fire" aria-hidden="true"></i></span><span>PARCHE <i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i></span><span>PICNIC <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i></span><span>NATURALEZA <i class="fa-solid fa-leaf" aria-hidden="true"></i></span><span>MÚSICA EN VIVO <i class="fa-solid fa-music" aria-hidden="true"></i></span>
+      <span>ASADO <i class="fa-solid fa-fire" aria-hidden="true"></i></span><span>PARCHE <i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i></span><span>PICNIC <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i></span><span>NATURALEZA <i class="fa-solid fa-leaf" aria-hidden="true"></i></span><span>MÚSICA EN VIVO <i class="fa-solid fa-music" aria-hidden="true"></i></span>
+    </div>
+  </div>
+
+  <!-- ===================== CONCEPTO ===================== -->
+  <section class="concept" id="concepto">
+    <div class="section__head reveal">
+      <span class="kicker">Nuestro parche</span>
+      <h2 class="section__title">Donde el asado<br/>se vive como un <em>parche</em></h2>
+    </div>
+    <div class="concept__grid">
+      <div class="concept__text reveal">
+        <p>En <strong>Avemaría</strong> el asado no es solo comida: es un plan. Somos un restaurante al aire libre donde disfrutas la mejor comida a la parrilla en contacto con la naturaleza y la tranquilidad de un bosque nativo.</p>
+        <p>Estamos a solo <strong>5 minutos de Villavicencio</strong>, en una zona segura y de ambiente agradable, perfecta para compartir en familia, en pareja o con los amigos. Buen parqueadero, espacios amplios al aire libre y un mobiliario cómodo para que solo te preocupes por pasarla bueno.</p>
+        <ul class="concept__feats">
+          <li><i class="fa-solid fa-leaf" aria-hidden="true"></i> Al aire libre, rodeado de naturaleza</li>
+          <li><i class="fa-solid fa-square-parking" aria-hidden="true"></i> Parqueadero amplio y zona segura</li>
+          <li><i class="fa-solid fa-music" aria-hidden="true"></i> Música en vivo los fines de semana</li>
+          <li><i class="fa-solid fa-people-group" aria-hidden="true"></i> Plan ideal para familias y grupos</li>
+        </ul>
+      </div>
+      <div class="concept__card reveal">
+        <div class="concept__card-inner">
+          <span class="concept__card-emoji"><i class="fa-solid fa-fire" aria-hidden="true"></i></span>
+          <p class="concept__card-quote">"Buen parche, buen ambiente."</p>
+          <p class="concept__card-meta">— Reseña en TripAdvisor</p>
+          <div class="concept__card-rank">
+            <strong>#1</strong>
+            <span>de 155 restaurantes<br/>en Villavicencio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCIA ===================== -->
+  <section class="pillars" id="experiencia">
+    <div class="section__head reveal">
+      <span class="kicker">Tres formas de vivirlo</span>
+      <h2 class="section__title">La experiencia Avemaría</h2>
+    </div>
+    <div class="pillars__grid">
+      <article class="pillar reveal">
+        <span class="pillar__num">01</span>
+        <span class="pillar__emoji"><i class="fa-solid fa-fire" aria-hidden="true"></i></span>
+        <h3>Asado</h3>
+        <p>Carnes a la parrilla, costillas, chunchulla y nuestras famosas picadas, preparadas al fuego como debe ser. Sabor llanero auténtico.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="pillar__num">02</span>
+        <span class="pillar__emoji"><i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i></span>
+        <h3>Parche</h3>
+        <p>Ambiente relajado, música en vivo los fines de semana y el mejor plan para compartir. Cervezas frías y buena energía garantizada.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="pillar__num">03</span>
+        <span class="pillar__emoji"><i class="fa-solid fa-basket-shopping" aria-hidden="true"></i></span>
+        <h3>Picnic</h3>
+        <p>Espacios al aire libre, naturaleza y mobiliario cómodo para disfrutar en familia, en pareja o con amigos. Un día perfecto al natural.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== VIDEO / SHOWREEL ===================== -->
+  <section class="showreel" id="video">
+    <div class="showreel__inner">
+      <div class="showreel__text reveal">
+        <span class="kicker">El ambiente</span>
+        <h2 class="section__title">Vívelo en <em>video</em></h2>
+        <p class="section__lead">Un recorrido por Avemaría: la parrilla al fuego, el verde del bosque nativo y el mejor parche de Villavicencio. Dale play y siéntelo.</p>
+        <ul class="showreel__feats">
+          <li><i class="fa-solid fa-fire" aria-hidden="true"></i> Asado al carbón, sabor llanero</li>
+          <li><i class="fa-solid fa-tree" aria-hidden="true"></i> Rodeado de naturaleza</li>
+          <li><i class="fa-solid fa-music" aria-hidden="true"></i> Música en vivo los fines de semana</li>
+        </ul>
+        <a href="https://wa.me/573104964953?text=Hola%20Avemar%C3%ADa%2C%20quiero%20reservar%20mesa" class="btn btn--primary" target="_blank" rel="noopener">Reservar mesa</a>
+      </div>
+
+      <div class="showreel__media reveal">
+        <div class="showreel__player" id="reelPlayer">
+          <video id="reelVideo" class="showreel__video" playsinline preload="none"
+                 poster="statics/video-poster.jpg" aria-label="Video del ambiente de Avemaría">
+            <source src="statics/videoreferenciamapa.mp4" type="video/mp4" />
+            Tu navegador no soporta video HTML5. <a href="statics/videoreferenciamapa.mp4">Descarga el video</a>.
+          </video>
+          <button class="showreel__play" id="reelPlay" type="button" aria-label="Reproducir video">
+            <i class="fa-solid fa-play" aria-hidden="true"></i>
+          </button>
+          <span class="showreel__badge"><i class="fa-solid fa-circle-play" aria-hidden="true"></i> Avemaría en vivo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MAPA / ZONAS ===================== -->
+  <section class="zonas" id="mapa">
+    <div class="section__head reveal">
+      <span class="kicker">Recorre el lugar</span>
+      <h2 class="section__title">El mapa de <em>Avemaría</em></h2>
+      <p class="section__lead">Este es el <strong>mapa ilustrado</strong> de Avemaría, recreado a partir de su ubicación real sobre la vía antigua a Restrepo. Un solo lugar, muchos planes: toca cada zona del mapa para descubrir su propuesta, su menú y sus detalles.</p>
+    </div>
+
+    <!-- Mapa ILUSTRADO Y ANIMADO de la zona de Avemaría, recreado a partir de su
+         ubicación real (vía antigua a Restrepo, Villavicencio) tomando como base
+         el mapa de Google. Los pines de cada zona se generan en js/main.js (x/y en %). -->
+    <div class="zonas__map reveal" id="zonasMap" role="group" aria-label="Mapa ilustrado e interactivo de Avemaría">
+      <svg class="zonas__svg" viewBox="0 0 1000 930" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Mapa ilustrado de la zona de Avemaría">
+        <defs>
+          <radialGradient id="zm-grass" cx="42%" cy="42%" r="85%">
+            <stop offset="0" stop-color="#d6efb2"/>
+            <stop offset=".62" stop-color="#a9da80"/>
+            <stop offset="1" stop-color="#83c262"/>
+          </radialGradient>
+          <linearGradient id="zm-forestG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2f8050"/>
+            <stop offset="1" stop-color="#1d6a3d"/>
+          </linearGradient>
+          <linearGradient id="zm-waterG" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#8fe0ec"/>
+            <stop offset="1" stop-color="#33a4c5"/>
+          </linearGradient>
+          <linearGradient id="zm-roadG" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#6c727a"/>
+            <stop offset="1" stop-color="#474d54"/>
+          </linearGradient>
+          <linearGradient id="zm-glass" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fff" stop-opacity=".30"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+          <filter id="zm-soft" x="-30%" y="-30%" width="160%" height="160%">
+            <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#173a1d" flood-opacity=".30"/>
+          </filter>
+          <symbol id="zm-palm" overflow="visible">
+            <ellipse cx="3" cy="7" rx="15" ry="5" fill="#103a1f" opacity=".18"/>
+            <g fill="#2f9d5e" stroke="#22824a" stroke-width="1.1">
+              <ellipse rx="17" ry="5.4"/>
+              <ellipse rx="17" ry="5.4" transform="rotate(45)"/>
+              <ellipse rx="17" ry="5.4" transform="rotate(90)"/>
+              <ellipse rx="17" ry="5.4" transform="rotate(135)"/>
+            </g>
+            <g fill="#48c079">
+              <ellipse rx="12" ry="3.6" transform="rotate(22)"/>
+              <ellipse rx="12" ry="3.6" transform="rotate(112)"/>
+            </g>
+            <circle r="4" fill="#7c5430"/>
+            <circle r="1.8" fill="#cfa463"/>
+          </symbol>
+          <symbol id="zm-umb" overflow="visible">
+            <ellipse cx="2" cy="5" rx="12" ry="4" fill="#103a1f" opacity=".18"/>
+            <circle r="13" fill="#fff"/>
+            <path d="M0,-13 A13,13 0 0,1 13,0 Z" fill="currentColor"/>
+            <path d="M0,13 A13,13 0 0,1 -13,0 Z" fill="currentColor"/>
+            <circle r="2.2" fill="#3a3a3a"/>
+          </symbol>
+        </defs>
+
+        <!-- Base: césped + claro del terreno (despeje donde están las zonas) -->
+        <rect width="1000" height="930" fill="url(#zm-grass)"/>
+        <g opacity=".55">
+          <ellipse cx="360" cy="360" rx="230" ry="200" fill="#c8ea9f"/>
+          <ellipse cx="430" cy="500" rx="220" ry="180" fill="#c2e79a"/>
+          <ellipse cx="320" cy="690" rx="170" ry="150" fill="#bfe49a"/>
+        </g>
+
+        <!-- ===== Bosque nativo: rodea el terreno (denso arriba y a la derecha) ===== -->
+        <!-- Franja superior -->
+        <path fill="url(#zm-forestG)" d="M0,0 H1000 V150 C930,196 880,150 800,172 C720,196 660,150 580,172 C500,196 440,150 360,172 C280,196 210,150 130,172 C82,188 40,188 0,168 Z"/>
+        <!-- Masa de bosque que envuelve la curva de la vía (arriba-derecha) -->
+        <path fill="url(#zm-forestG)" d="M620,0 C660,120 720,150 800,180 C900,216 980,250 1000,300 V0 Z" opacity=".96"/>
+        <!-- Bosque al otro lado de la vía (borde derecho) -->
+        <path fill="url(#zm-forestG)" d="M1000,300 C940,360 900,440 900,540 C900,660 940,760 1000,840 V300 Z"/>
+        <!-- copas de árboles -->
+        <g fill="#1d6a3d">
+          <circle cx="60" cy="64" r="32"/><circle cx="150" cy="104" r="26"/><circle cx="236" cy="60" r="32"/>
+          <circle cx="326" cy="108" r="25"/><circle cx="410" cy="60" r="31"/><circle cx="500" cy="108" r="26"/>
+          <circle cx="590" cy="64" r="30"/><circle cx="688" cy="120" r="26"/><circle cx="784" cy="78" r="32"/>
+          <circle cx="876" cy="140" r="30"/><circle cx="952" cy="86" r="30"/><circle cx="996" cy="190" r="34"/>
+          <circle cx="940" cy="300" r="30"/><circle cx="980" cy="420" r="30"/><circle cx="950" cy="540" r="30"/>
+          <circle cx="978" cy="660" r="30"/><circle cx="936" cy="780" r="28"/>
+        </g>
+        <g fill="#37a25c">
+          <circle cx="60" cy="56" r="18"/><circle cx="236" cy="52" r="18"/><circle cx="410" cy="54" r="17"/>
+          <circle cx="590" cy="56" r="17"/><circle cx="784" cy="70" r="18"/><circle cx="952" cy="78" r="18"/>
+          <circle cx="940" cy="292" r="16"/><circle cx="950" cy="532" r="16"/><circle cx="936" cy="772" r="15"/>
+        </g>
+        <!-- Arboledas en los bordes izquierdo e inferior -->
+        <g fill="#1d6a3d">
+          <circle cx="22" cy="320" r="26"/><circle cx="38" cy="410" r="28"/><circle cx="20" cy="500" r="24"/>
+          <circle cx="40" cy="600" r="26"/><circle cx="26" cy="700" r="24"/><circle cx="48" cy="800" r="26"/>
+          <circle cx="120" cy="892" r="26"/><circle cx="600" cy="900" r="26"/><circle cx="700" cy="884" r="24"/>
+        </g>
+        <g fill="#37a25c">
+          <circle cx="38" cy="402" r="15"/><circle cx="40" cy="592" r="15"/><circle cx="48" cy="792" r="15"/>
+        </g>
+
+        <!-- ===== Vía antigua a Restrepo: entra arriba-derecha, baja al centro-abajo ===== -->
+        <path d="M845,-30 C905,120 905,255 832,358 C762,463 662,556 582,648 C522,718 482,822 478,960" fill="none" stroke="#2b2f34" stroke-width="70" stroke-linecap="round"/>
+        <path id="zm-roadpath" d="M845,-30 C905,120 905,255 832,358 C762,463 662,556 582,648 C522,718 482,822 478,960" fill="none" stroke="url(#zm-roadG)" stroke-width="56" stroke-linecap="round"/>
+        <path class="zm-roadline" d="M845,-30 C905,120 905,255 832,358 C762,463 662,556 582,648 C522,718 482,822 478,960" fill="none" stroke="#ffd24a" stroke-width="4.5" stroke-dasharray="24 28" stroke-linecap="round"/>
+        <text class="zm-roadlabel" font-size="17" letter-spacing="3" fill="#fff" opacity=".92" font-weight="700">
+          <textPath href="#zm-roadpath" startOffset="40%">VÍA ANTIGUA A RESTREPO · VILLAVICENCIO 5 MIN</textPath>
+        </text>
+
+        <!-- Vía de acceso: se desprende de la vía principal, sube vertical (hacia la pizzería) y voltea hacia el parqueadero -->
+        <path d="M566,668 C544,684 514,682 506,652 C497,624 499,602 499,582 C499,566 474,576 446,576 C424,576 410,584 402,592" fill="none" stroke="#2b2f34" stroke-width="32" stroke-linecap="round"/>
+        <path d="M566,668 C544,684 514,682 506,652 C497,624 499,602 499,582 C499,566 474,576 446,576 C424,576 410,584 402,592" fill="none" stroke="#6a7079" stroke-width="24" stroke-linecap="round"/>
+
+        <!-- ===== Parqueadero (zona oscura con carriles y flechas), centro-abajo ===== -->
+        <g filter="url(#zm-soft)">
+          <path d="M206,566 L416,548 L452,898 L240,918 Z" fill="#222528"/>
+          <path d="M206,566 L416,548 L452,898 L240,918 Z" fill="url(#zm-glass)" opacity=".5"/>
+        </g>
+        <!-- divisiones de carriles -->
+        <g stroke="#e9eef2" stroke-width="3" opacity=".55" stroke-dasharray="14 12">
+          <path d="M258,560 L290,906" fill="none"/>
+          <path d="M310,556 L340,902" fill="none"/>
+          <path d="M362,552 L394,898" fill="none"/>
+        </g>
+        <!-- flechas de circulación (dos sentidos) -->
+        <g fill="none" stroke="#f4f7fa" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity=".85">
+          <path d="M276,760 L274,640 M262,664 L274,640 L287,667"/>
+          <path d="M330,716 L332,838 M345,814 L332,838 L319,811"/>
+          <path d="M384,758 L382,636 M370,660 L382,636 L395,663"/>
+        </g>
+        <!-- carritos parqueados -->
+        <g>
+          <rect x="222" y="600" width="26" height="15" rx="4" fill="#ffd24a" transform="rotate(-6 235 607)"/>
+          <rect x="226" y="660" width="26" height="15" rx="4" fill="#3fa9c4" transform="rotate(-6 239 667)"/>
+          <rect x="408" y="612" width="26" height="15" rx="4" fill="#FF158C" transform="rotate(-6 421 619)"/>
+          <rect x="414" y="690" width="26" height="15" rx="4" fill="#E11161" transform="rotate(-6 427 697)"/>
+        </g>
+
+        <!-- ===== Senderos del terreno (conectan las zonas) ===== -->
+        <g fill="none" stroke="#ecdcb4" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" opacity=".95">
+          <path d="M497,440 C470,400 440,360 419,300"/>
+          <path d="M419,300 C400,232 372,200 343,176"/>
+          <path d="M419,300 C386,330 360,348 332,364"/>
+          <path d="M332,364 C300,400 280,440 369,490"/>
+          <path d="M369,490 C320,510 240,520 162,520"/>
+          <path d="M162,520 C160,440 158,380 162,340"/>
+          <path d="M480,470 C510,500 525,520 537,540"/>
+        </g>
+
+        <!-- =====================================================================
+             EDIFICIOS / ZONAS de Avemaría (debajo de cada pin del mapa).
+             Posiciones en coordenadas del viewBox (x% · 10 , y% · 9.3).
+             ===================================================================== -->
+
+        <!-- Restaurante Principal (cubierta con paneles solares) · pin (497,394) -->
+        <g filter="url(#zm-soft)">
+          <rect x="430" y="372" width="150" height="86" rx="13" fill="#7a5a85"/>
+          <rect x="426" y="364" width="158" height="80" rx="13" fill="#5B3FB0"/>
+          <g fill="#22356b" opacity=".5">
+            <rect x="436" y="372" width="138" height="9" rx="2"/>
+            <rect x="436" y="385" width="138" height="9" rx="2"/>
+            <rect x="436" y="398" width="138" height="9" rx="2"/>
+            <rect x="436" y="411" width="138" height="9" rx="2"/>
+          </g>
+          <rect x="426" y="364" width="158" height="80" rx="13" fill="url(#zm-glass)"/>
+        </g>
+
+        <!-- Patriarca · Restaurante (deck verde) · pin (419,267) -->
+        <g filter="url(#zm-soft)">
+          <rect x="362" y="248" width="116" height="62" rx="12" fill="#157a39"/>
+          <rect x="358" y="240" width="124" height="56" rx="12" fill="#1E9E4A"/>
+          <g fill="#fff" opacity=".4">
+            <rect x="370" y="248" width="100" height="7" rx="3"/>
+            <rect x="370" y="262" width="100" height="7" rx="3"/>
+          </g>
+          <rect x="358" y="240" width="124" height="56" rx="12" fill="url(#zm-glass)"/>
+        </g>
+
+        <!-- Macondo · Tarima (escenario + notas) · pin (332,364) -->
+        <g filter="url(#zm-soft)">
+          <rect x="278" y="372" width="112" height="48" rx="10" fill="#caa46b"/>
+          <rect x="278" y="364" width="112" height="20" rx="8" fill="#7a3f12"/>
+          <path d="M272,368 Q334,342 396,368 L396,380 L272,380 Z" fill="#E11161"/>
+          <path d="M272,368 Q334,342 396,368 L396,380 L272,380 Z" fill="url(#zm-glass)"/>
+        </g>
+        <g class="zm-notes" fill="#E11161" font-size="20" font-weight="700">
+          <text class="zm-note" x="334" y="356">&#9834;</text>
+          <text class="zm-note zm-note--b" x="356" y="350">&#9835;</text>
+          <text class="zm-note zm-note--c" x="316" y="352">&#9834;</text>
+        </g>
+
+        <!-- Ojarasca · Restaurante (deck verde) · pin (369,490) -->
+        <g filter="url(#zm-soft)">
+          <rect x="316" y="472" width="104" height="56" rx="11" fill="#1d7a45"/>
+          <rect x="312" y="464" width="112" height="50" rx="11" fill="#2EB85C"/>
+          <g fill="#fff" opacity=".38">
+            <rect x="322" y="472" width="92" height="7" rx="3"/>
+            <rect x="322" y="486" width="92" height="7" rx="3"/>
+          </g>
+          <rect x="312" y="464" width="112" height="50" rx="11" fill="url(#zm-glass)"/>
+        </g>
+
+        <!-- Little Italy · Pizza (horno de leña + humo) · pin (537,540) -->
+        <g filter="url(#zm-soft)">
+          <rect x="492" y="520" width="90" height="56" rx="11" fill="#9c1f1f"/>
+          <rect x="496" y="508" width="14" height="16" rx="3" fill="#6f1414"/>
+          <rect x="488" y="514" width="98" height="50" rx="11" fill="#D62828"/>
+          <rect x="488" y="514" width="98" height="50" rx="11" fill="url(#zm-glass)"/>
+        </g>
+        <g class="zm-smoke zm-smoke--b" fill="#e6e0d6">
+          <circle cx="503" cy="508" r="5"/><circle cx="503" cy="508" r="6"/><circle cx="503" cy="508" r="4"/>
+        </g>
+
+        <!-- BBC · Bebidas (barra) · pin (343,166) -->
+        <g filter="url(#zm-soft)">
+          <rect x="296" y="150" width="96" height="52" rx="11" fill="#c2a40a"/>
+          <rect x="292" y="142" width="104" height="46" rx="11" fill="#F2C811"/>
+          <rect x="302" y="150" width="84" height="8" rx="3" fill="#fff" opacity=".4"/>
+          <rect x="292" y="142" width="104" height="46" rx="11" fill="url(#zm-glass)"/>
+        </g>
+
+        <!-- Floresta · Postres (kiosco) · pin (162,304) -->
+        <g filter="url(#zm-soft)">
+          <rect x="120" y="288" width="68" height="50" rx="10" fill="#2a3470"/>
+          <rect x="116" y="282" width="76" height="46" rx="10" fill="#3B49B0"/>
+          <g fill="#fff" opacity=".5">
+            <rect x="116" y="282" width="12" height="46"/>
+            <rect x="140" y="282" width="12" height="46"/>
+            <rect x="164" y="282" width="12" height="46"/>
+          </g>
+        </g>
+
+        <!-- Zona Kids (juegos) · pin (144,493) -->
+        <g filter="url(#zm-soft)">
+          <rect x="86" y="452" width="128" height="92" rx="16" fill="#f3deb0"/>
+        </g>
+        <path d="M150,468 L150,496 L180,520" fill="none" stroke="#FFB400" stroke-width="9" stroke-linecap="round"/>
+        <rect x="142" y="464" width="16" height="16" rx="3" fill="#E11161"/>
+        <circle cx="120" cy="512" r="16" fill="#1FB6C9"/>
+        <circle cx="120" cy="512" r="6" fill="#fff"/>
+        <rect x="174" y="476" width="6" height="34" rx="3" fill="#6b7280"/>
+
+        <!-- ===== Jardín de Sombrillas (picnic, en el hueco entre Macondo y Ojarasca, con holgura) ===== -->
+        <g>
+          <g transform="translate(290,440)"><g class="zm-palm-s"><use href="#zm-umb" transform="scale(.8)" style="color:#00B36B"/></g></g>
+          <g transform="translate(320,437)"><g class="zm-palm-s d2"><use href="#zm-umb" transform="scale(.8)" style="color:#FF158C"/></g></g>
+          <g transform="translate(350,441)"><g class="zm-palm-s d3"><use href="#zm-umb" transform="scale(.8)" style="color:#FF8A00"/></g></g>
+          <g transform="translate(380,437)"><g class="zm-palm-s"><use href="#zm-umb" transform="scale(.8)" style="color:#1FB6C9"/></g></g>
+          <g transform="translate(410,440)"><g class="zm-palm-s d2"><use href="#zm-umb" transform="scale(.8)" style="color:#FFB400"/></g></g>
+        </g>
+
+        <!-- ===== Palmeras (se mecen con el viento) ===== -->
+        <g>
+          <g transform="translate(120,260)"><g class="zm-palm-s"><use href="#zm-palm" transform="scale(1.15)"/></g></g>
+          <g transform="translate(232,210)"><g class="zm-palm-s d2"><use href="#zm-palm"/></g></g>
+          <g transform="translate(470,330)"><g class="zm-palm-s d3"><use href="#zm-palm" transform="scale(.9)"/></g></g>
+          <g transform="translate(560,470)"><g class="zm-palm-s"><use href="#zm-palm" transform="scale(1.1)"/></g></g>
+          <g transform="translate(610,560)"><g class="zm-palm-s d2"><use href="#zm-palm"/></g></g>
+          <g transform="translate(540,640)"><g class="zm-palm-s d3"><use href="#zm-palm" transform="scale(1.15)"/></g></g>
+          <g transform="translate(120,600)"><g class="zm-palm-s"><use href="#zm-palm" transform="scale(.95)"/></g></g>
+          <g transform="translate(470,580)"><g class="zm-palm-s d2"><use href="#zm-palm" transform="scale(1.05)"/></g></g>
+          <g transform="translate(96,700)"><g class="zm-palm-s d3"><use href="#zm-palm"/></g></g>
+          <g transform="translate(560,720)"><g class="zm-palm-s"><use href="#zm-palm" transform="scale(.95)"/></g></g>
+        </g>
+
+        <!-- Florecitas -->
+        <g>
+          <circle cx="300" cy="320" r="3" fill="#FF158C"/><circle cx="430" cy="540" r="3" fill="#FFB400"/>
+          <circle cx="470" cy="430" r="3" fill="#FF5BB0"/><circle cx="270" cy="560" r="3" fill="#B5179E"/>
+          <circle cx="560" cy="600" r="3" fill="#FF8A00"/><circle cx="210" cy="480" r="3" fill="#1FB6C9"/>
+        </g>
+
+        <!-- Nubes que se desplazan -->
+        <g class="zm-cloud" fill="#fff" opacity=".22">
+          <ellipse cx="0" cy="230" rx="60" ry="22"/><ellipse cx="40" cy="220" rx="46" ry="20"/><ellipse cx="-38" cy="222" rx="40" ry="18"/>
+        </g>
+        <g class="zm-cloud zm-cloud--b" fill="#fff" opacity=".18">
+          <ellipse cx="0" cy="560" rx="70" ry="24"/><ellipse cx="50" cy="548" rx="50" ry="20"/><ellipse cx="-46" cy="550" rx="44" ry="18"/>
+        </g>
+
+        <!-- Rosa de los vientos -->
+        <g transform="translate(58,860)">
+          <circle r="28" fill="#fffaf0" opacity=".92" stroke="#34393f" stroke-width="2"/>
+          <path d="M0,-20 L7,0 L0,6 L-7,0 Z" fill="#E11161"/>
+          <path d="M0,20 L7,0 L0,-6 L-7,0 Z" fill="#34393f"/>
+          <text x="0" y="-10" text-anchor="middle" font-size="11" font-weight="800" fill="#34393f">N</text>
+        </g>
+
+        <!-- Carros recorriendo la vía -->
+        <g class="zm-car">
+          <rect x="-12" y="-7" width="24" height="14" rx="5" fill="#E11161"/>
+          <rect x="2" y="-7" width="9" height="14" rx="3" fill="#bfe9f2"/>
+          <rect x="-12" y="-5" width="4" height="10" rx="2" fill="#2b2b2b"/>
+          <animateMotion dur="14s" repeatCount="indefinite" rotate="auto"><mpath href="#zm-roadpath"/></animateMotion>
+        </g>
+        <g class="zm-car">
+          <rect x="-11" y="-6" width="22" height="12" rx="5" fill="#ffd24a"/>
+          <rect x="2" y="-6" width="8" height="12" rx="3" fill="#7a5a10"/>
+          <animateMotion dur="18s" repeatCount="indefinite" rotate="auto-reverse" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#zm-roadpath"/></animateMotion>
+        </g>
+      </svg>
+      <span class="zonas__scrim" aria-hidden="true"></span>
+      <!-- Los puntos (pins) se generan dinámicamente desde js/main.js -->
+    </div>
+
+    <p class="zonas__hint reveal"><i class="fa-solid fa-hand-pointer" aria-hidden="true"></i> Toca un punto del mapa o elige una zona:</p>
+    <ul class="zonas__list reveal" id="zonasList" aria-label="Zonas de Avemaría"></ul>
+  </section>
+
+  <!-- Panel deslizable de detalle de zona -->
+  <div class="zdrawer" id="zDrawer" aria-hidden="true">
+    <div class="zdrawer__backdrop" data-close></div>
+    <aside class="zdrawer__panel" role="dialog" aria-modal="true" aria-labelledby="zTitle">
+      <button class="zdrawer__close" id="zClose" data-close aria-label="Cerrar">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <div class="zdrawer__head">
+        <span class="zdrawer__icon" id="zIcon"><i class="fa-solid fa-fire" aria-hidden="true"></i></span>
+        <div>
+          <span class="zdrawer__tag" id="zTag"></span>
+          <h3 class="zdrawer__title" id="zTitle"></h3>
+        </div>
+      </div>
+
+      <!-- Carrusel de imágenes de la zona (de prueba; reemplazar por fotos reales en js/main.js → images:[...]) -->
+      <div class="zcar" id="zCar" aria-roledescription="carrusel" aria-label="Galería de la zona">
+        <div class="zcar__viewport" id="zCarViewport">
+          <div class="zcar__track" id="zCarTrack"></div>
+        </div>
+        <button class="zcar__arrow zcar__arrow--prev" id="zCarPrev" type="button" aria-label="Imagen anterior"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+        <button class="zcar__arrow zcar__arrow--next" id="zCarNext" type="button" aria-label="Imagen siguiente"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+        <span class="zcar__tag"><i class="fa-solid fa-camera" aria-hidden="true"></i> Imágenes de prueba</span>
+        <div class="zcar__dots" id="zCarDots" role="tablist" aria-label="Seleccionar imagen"></div>
+      </div>
+
+      <p class="zdrawer__desc" id="zDesc"></p>
+      <p class="zdrawer__hours" id="zHours"><i class="fa-solid fa-clock" aria-hidden="true"></i> <span></span></p>
+      <div class="zdrawer__menu-wrap" id="zMenuWrap">
+        <h4 class="zdrawer__menu-title" id="zMenuTitle">Especialidades</h4>
+        <ul class="zdrawer__menu" id="zMenu"></ul>
+        <p class="zdrawer__menu-note" id="zMenuNote"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Menú de muestra · precios de referencia</p>
+      </div>
+      <a class="btn btn--primary zdrawer__cta" id="zCta" href="#" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Reservar esta zona
+      </a>
+    </aside>
+  </div>
+
+  <!-- ===================== MENÚ ===================== -->
+  <section class="menu" id="menu">
+    <div class="section__head reveal">
+      <span class="kicker">Nuestra carta</span>
+      <h2 class="section__title">Para comer bueno</h2>
+      <p class="section__lead">Una selección de nuestros favoritos. La carta completa y los precios actualizados están disponibles en el restaurante y por WhatsApp.</p>
+    </div>
+
+    <div class="menu__grid">
+      <div class="menu__col reveal">
+        <h3 class="menu__cat"><i class="fa-solid fa-fire" aria-hidden="true"></i> Picadas &amp; Parrilla</h3>
+        <ul class="menu__list">
+          <li><span class="menu__name">Picada Avemaría</span><span class="menu__desc">Surtido de carnes, chorizo, chunchulla, papa criolla y arepa. Para compartir.</span></li>
+          <li><span class="menu__name">Parrillada mixta</span><span class="menu__desc">Res, cerdo y pollo a la parrilla con sus acompañamientos.</span></li>
+          <li><span class="menu__name">Costillas BBQ</span><span class="menu__desc">Costillas de cerdo bañadas en salsa de la casa.</span></li>
+          <li><span class="menu__name">Asado de res</span><span class="menu__desc">Corte llanero al carbón, jugoso y al punto.</span></li>
+          <li><span class="menu__name">Chunchulla</span><span class="menu__desc">La tradicional, crocante por fuera y tierna por dentro.</span></li>
+        </ul>
+      </div>
+
+      <div class="menu__col reveal">
+        <h3 class="menu__cat"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Para compartir</h3>
+        <ul class="menu__list">
+          <li><span class="menu__name">Arepa de huevo</span><span class="menu__desc">Clásico de la región, crujiente y rellena.</span></li>
+          <li><span class="menu__name">Ceviche de la casa</span><span class="menu__desc">Fresco, cítrico y bien servido.</span></li>
+          <li><span class="menu__name">Chorizo llanero</span><span class="menu__desc">A la parrilla con arepa y ají.</span></li>
+          <li><span class="menu__name">Patacones &amp; yuca</span><span class="menu__desc">Acompañamientos crocantes para todo.</span></li>
+        </ul>
+
+        <h3 class="menu__cat" style="margin-top:2rem"><i class="fa-solid fa-burger" aria-hidden="true"></i> Hamburguesas</h3>
+        <ul class="menu__list">
+          <li><span class="menu__name">Hamburguesa Avemaría</span><span class="menu__desc">Carne a la parrilla, queso y la salsa secreta de la casa.</span></li>
+          <li><span class="menu__name">Doble carne</span><span class="menu__desc">Para los que tienen buen hambre.</span></li>
+        </ul>
+      </div>
+
+      <div class="menu__col reveal">
+        <h3 class="menu__cat"><i class="fa-solid fa-beer-mug-empty" aria-hidden="true"></i> Bebidas</h3>
+        <ul class="menu__list">
+          <li><span class="menu__name">Cervezas heladas</span><span class="menu__desc">Nacionales e importadas, bien frías.</span></li>
+          <li><span class="menu__name">Limonadas &amp; naturales</span><span class="menu__desc">Coco, cerezada y de frutas de temporada.</span></li>
+          <li><span class="menu__name">Cócteles</span><span class="menu__desc">Para acompañar el atardecer llanero.</span></li>
+          <li><span class="menu__name">Gaseosas &amp; sodas</span><span class="menu__desc">La línea completa para toda la mesa.</span></li>
+        </ul>
+
+        <div class="menu__note">
+          <p><strong>Plan completo</strong> entre <span>$40.000</span> y <span>$60.000</span> por persona aprox.</p>
+          <a href="https://wa.me/573104964953?text=Hola%20Avemar%C3%ADa%2C%20quiero%20ver%20la%20carta%20completa" class="btn btn--primary btn--sm" target="_blank" rel="noopener">Pedir carta completa</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALERÍA ===================== -->
+  <section class="gallery" id="galeria">
+    <div class="section__head reveal">
+      <span class="kicker">El ambiente</span>
+      <h2 class="section__title">Así se vive Avemaría</h2>
+      <p class="section__lead">Síguenos en Instagram <a href="https://instagram.com/avemaria_villavicencio" target="_blank" rel="noopener">@avemaria_villavicencio</a> para ver el parche en tiempo real.</p>
+    </div>
+    <!-- Reemplaza los data-label/colores por las fotos reales del restaurante: <img src="statics/galeria/foto1.jpg" ...> -->
+    <div class="gallery__grid">
+      <figure class="gallery__item g1 reveal"><figcaption><i class="fa-solid fa-fire" aria-hidden="true"></i> Parrilla al carbón</figcaption></figure>
+      <figure class="gallery__item g2 reveal"><figcaption><i class="fa-solid fa-leaf" aria-hidden="true"></i> Al aire libre</figcaption></figure>
+      <figure class="gallery__item g3 reveal"><figcaption><i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i> Picada Avemaría</figcaption></figure>
+      <figure class="gallery__item g4 reveal"><figcaption><i class="fa-solid fa-music" aria-hidden="true"></i> Música en vivo</figcaption></figure>
+      <figure class="gallery__item g5 reveal"><figcaption><i class="fa-solid fa-beer-mug-empty" aria-hidden="true"></i> Buen parche</figcaption></figure>
+      <figure class="gallery__item g6 reveal"><figcaption><i class="fa-solid fa-mountain-sun" aria-hidden="true"></i> Atardecer llanero</figcaption></figure>
+    </div>
+    <div class="gallery__cta reveal">
+      <a href="https://instagram.com/avemaria_villavicencio" target="_blank" rel="noopener" class="btn btn--primary">Ver más en Instagram</a>
+    </div>
+  </section>
+
+  <!-- ===================== RESEÑAS ===================== -->
+  <section class="reviews" id="resenas">
+    <div class="section__head reveal">
+      <span class="kicker">Lo que dicen</span>
+      <h2 class="section__title">El #1 de Villavicencio</h2>
+    </div>
+
+    <div class="reviews__scores reveal">
+      <div class="score"><strong>4.9</strong><span><i class="fa-solid fa-star" aria-hidden="true"></i> TripAdvisor</span><small>565 reseñas</small></div>
+      <div class="score"><strong>4.7</strong><span><i class="fa-solid fa-star" aria-hidden="true"></i> Google</span><small>+2.700 reseñas</small></div>
+      <div class="score"><strong>4.6</strong><span><i class="fa-solid fa-star" aria-hidden="true"></i> Facebook</span><small>392 reseñas</small></div>
+      <div class="score"><strong>#1</strong><span><i class="fa-solid fa-trophy" aria-hidden="true"></i> Ranking</span><small>de 155 en la ciudad</small></div>
+    </div>
+
+    <div class="reviews__grid">
+      <blockquote class="review reveal">
+        <p>"Comida deliciosa, ambiente inigualable y un servicio espectacular. El concepto de picnic y parrilla está muy bien logrado."</p>
+        <footer>— Visitante en Google</footer>
+      </blockquote>
+      <blockquote class="review reveal">
+        <p>"Buen parche, buen ambiente. A 5 minutos de la ciudad y se siente como estar en plena naturaleza."</p>
+        <footer>— Reseña en TripAdvisor</footer>
+      </blockquote>
+      <blockquote class="review reveal">
+        <p>"El lugar perfecto para compartir en familia. Las picadas y el asado son lo máximo, y la música en vivo le pone el toque."</p>
+        <footer>— Cliente frecuente</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ===================== VISÍTANOS ===================== -->
+  <section class="visit" id="visitanos">
+    <div class="visit__grid">
+      <div class="visit__info reveal">
+        <span class="kicker">Visítanos</span>
+        <h2 class="section__title">Te esperamos<br/>en el parche</h2>
+
+        <div class="visit__block">
+          <h3><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Dirección</h3>
+          <p>Km 2 Vía Antigua a Restrepo<br/>Villavicencio, Meta · Colombia</p>
+          <p class="visit__hint">A solo 5 minutos de la ciudad.</p>
+        </div>
+
+        <div class="visit__block">
+          <h3><i class="fa-solid fa-clock" aria-hidden="true"></i> Horarios</h3>
+          <ul class="visit__hours">
+            <li><span>Lunes</span><span class="closed">Cerrado</span></li>
+            <li><span>Martes</span><span>5:00 p.m. – 10:00 p.m.</span></li>
+            <li><span>Miér – Jue</span><span>4:00 p.m. – 10:00 p.m.</span></li>
+            <li><span>Vie – Sáb</span><span>12:00 m. – 10:30 p.m.</span></li>
+            <li><span>Domingo</span><span>12:00 m. – 10:00 p.m.</span></li>
+          </ul>
+        </div>
+
+        <div class="visit__block">
+          <h3><i class="fa-solid fa-phone" aria-hidden="true"></i> Contacto</h3>
+          <p><a href="tel:+573104964953">+57 310 496 4953</a></p>
+          <div class="visit__social">
+            <a href="https://wa.me/573104964953" target="_blank" rel="noopener" class="btn btn--primary btn--sm">WhatsApp</a>
+            <a href="https://instagram.com/avemaria_villavicencio" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Instagram</a>
+            <a href="https://www.facebook.com/avemaria.villavicencio/" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Facebook</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="visit__map reveal">
+        <iframe
+          title="Ubicación de Avemaría en Villavicencio"
+          src="https://www.google.com/maps?q=Avemaria+Villavicencio+Meta&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA FINAL ===================== -->
+  <section class="finalcta">
+    <div class="finalcta__rainbow" aria-hidden="true"></div>
+    <h2 class="reveal">¿Listos para el parche?</h2>
+    <p class="reveal">Reserva tu mesa o pregúntanos por eventos y celebraciones.</p>
+    <a href="https://wa.me/573104964953?text=Hola%20Avemar%C3%ADa%2C%20quiero%20reservar%20mesa" class="btn btn--primary btn--lg reveal" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="statics/avemarialogo.png" alt="Avemaría" />
+        <p>Asado · Parche · Picnic<br/>Villavicencio, Meta</p>
+      </div>
+      <nav class="footer__links" aria-label="Pie de página">
+        <a href="#concepto">El Parche</a>
+        <a href="#mapa">Zonas</a>
+        <a href="#menu">Carta</a>
+        <a href="#galeria">Galería</a>
+        <a href="#visitanos">Visítanos</a>
+        <a href="https://instagram.com/avemaria_villavicencio" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> Avemaría Villavicencio · Hecho con <i class="fa-solid fa-fire" aria-hidden="true"></i> y buen parche.</p>
+    </div>
+  </footer>
+
+  <a href="#inicio" class="totop" id="toTop" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
